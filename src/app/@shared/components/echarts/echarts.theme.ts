@@ -10,7 +10,6 @@ const LIGHT_TEXT_COLOR = '#9B9FA8';
 const LIGHT_LEGEND_COLOR = '#71757F';
 const LIGHT_AXIS_COLOR = '#D7D8DA';
 
-
 const DEFAULT_BASIC_COLOR_PALETTE = [
   '#5C8DFF',
   '#BC94FF',
@@ -31,10 +30,10 @@ const DEFAULT_BASIC_COLOR_PALETTE = [
   '#69DBB9',
   '#76DBEF',
   '#B1CE4F',
-  '#5DA4DC'
+  '#5DA4DC',
 ];
 
-const DEFAULT_DARK_COLOR_PALETTE =  ['#FFEE01', '#FF7592', '#FF974A', '#666D8F', '#3EC554', '#7F4CDA', '#E47CF3', '#00AFD4']
+const DEFAULT_DARK_COLOR_PALETTE = ['#FFEE01', '#FF7592', '#FF974A', '#666D8F', '#3EC554', '#7F4CDA', '#E47CF3', '#00AFD4'];
 
 function axisCommon(type: string) {
   if (type === 'dark') {
@@ -50,9 +49,7 @@ function axisCommon(type: string) {
         },
       },
       axisLabel: {
-        textStyle: {
-          color: DARK_TEXT_COLOR,
-        },
+        color: DARK_TEXT_COLOR,
       },
       splitLine: {
         lineStyle: {
@@ -74,9 +71,7 @@ function axisCommon(type: string) {
         },
       },
       axisLabel: {
-        textStyle: {
-          color: LIGHT_TEXT_COLOR,
-        },
+        color: LIGHT_TEXT_COLOR,
       },
       splitLine: {
         lineStyle: {
@@ -86,7 +81,7 @@ function axisCommon(type: string) {
       },
     };
   }
-};
+}
 
 export const defaultColorPalette = DEFAULT_BASIC_COLOR_PALETTE;
 export const defaultDarkColorPalette = DEFAULT_DARK_COLOR_PALETTE;
@@ -140,9 +135,8 @@ export const semanticColor = {
   attention: '#F3C836',
   safty: '#4FBF67',
   hints: '#419AF2',
-  disable: '#CACBCC'
+  disable: '#CACBCC',
 };
-
 
 /**
  * 强调色板
@@ -167,17 +161,17 @@ export const DEVUI_ECHART_THEME = {
     tooltip: {
       axisPointer: {
         label: {
-          show: false
+          show: false,
         },
         lineStyle: {
           color: DARK_LINE_COLOR,
           width: 2,
-          type: [2, 3]
+          type: [2, 3],
         },
         crossStyle: {
           color: DARK_LINE_COLOR,
           width: 2,
-          type: [2, 3]
+          type: [2, 3],
         },
       },
       backgroundColor: 'rgba(36,37,38,0.96)',
@@ -186,8 +180,8 @@ export const DEVUI_ECHART_THEME = {
       padding: [8, 8],
       textStyle: {
         color: DARK_LEGEND_COLOR,
-        fontSize: 12
-      }
+        fontSize: 12,
+      },
     },
     visualMap: {
       textStyle: {
@@ -211,9 +205,7 @@ export const DEVUI_ECHART_THEME = {
     },
     toolbox: {
       iconStyle: {
-        normal: {
-          borderColor: DARK_LINE_COLOR,
-        },
+        borderColor: DARK_LINE_COLOR,
       },
     },
     dataZoom: {
@@ -226,11 +218,7 @@ export const DEVUI_ECHART_THEME = {
         color: DARK_LINE_COLOR,
       },
       label: {
-        normal: {
-          textStyle: {
-            color: DARK_TEXT_COLOR,
-          },
-        },
+        color: DARK_TEXT_COLOR,
       },
     },
     timeAxis: axisCommon('dark'),
@@ -244,7 +232,7 @@ export const DEVUI_ECHART_THEME = {
         },
       },
       axisTick: {
-        show: false
+        show: false,
       },
     },
     categoryAxis: {
@@ -256,7 +244,7 @@ export const DEVUI_ECHART_THEME = {
         },
       },
       axisTick: {
-        show: false
+        show: false,
       },
     },
     line: {
@@ -267,10 +255,8 @@ export const DEVUI_ECHART_THEME = {
     },
     geo: {
       itemStyle: {
-        normal: {
-          borderColor: '#fff', // 地图省与省之间的线条的颜色
-          areaColor: '#37383A', // 地图省区域的颜色
-        },
+        borderColor: '#fff', // 地图省与省之间的线条的颜色
+        areaColor: '#37383A', // 地图省区域的颜色
       },
     },
   },
@@ -280,17 +266,17 @@ export const DEVUI_ECHART_THEME = {
     tooltip: {
       axisPointer: {
         label: {
-          show: false
+          show: false,
         },
         lineStyle: {
           color: LIGHT_LINE_COLOR,
           width: 2,
-          type: [2, 3]
+          type: [2, 3],
         },
         crossStyle: {
           color: LIGHT_LINE_COLOR,
           width: 2,
-          type: [2, 3]
+          type: [2, 3],
         },
       },
       backgroundColor: 'rgba(255,255,255,0.96)',
@@ -299,7 +285,7 @@ export const DEVUI_ECHART_THEME = {
       padding: [8, 8],
       textStyle: {
         color: LIGHT_LEGEND_COLOR,
-        fontSize: 12
+        fontSize: 12,
       },
     },
     legend: {
@@ -320,9 +306,7 @@ export const DEVUI_ECHART_THEME = {
     },
     toolbox: {
       iconStyle: {
-        normal: {
-          borderColor: LIGHT_LINE_COLOR,
-        },
+        borderColor: LIGHT_LINE_COLOR,
       },
     },
     dataZoom: {
@@ -333,25 +317,21 @@ export const DEVUI_ECHART_THEME = {
     radar: {
       splitLine: {
         lineStyle: {
-          color: LIGHT_AXIS_COLOR
+          color: LIGHT_AXIS_COLOR,
         },
       },
       axisLine: {
         lineStyle: {
-          color: LIGHT_AXIS_COLOR
+          color: LIGHT_AXIS_COLOR,
         },
-      }
+      },
     },
     timeline: {
       lineStyle: {
         color: LIGHT_LINE_COLOR,
       },
       label: {
-        normal: {
-          textStyle: {
-            color: LIGHT_TEXT_COLOR,
-          },
-        },
+        color: LIGHT_TEXT_COLOR,
       },
     },
     timeAxis: axisCommon('light'),
@@ -365,7 +345,7 @@ export const DEVUI_ECHART_THEME = {
         },
       },
       axisTick: {
-        show: false
+        show: false,
       },
     },
     categoryAxis: {
@@ -377,7 +357,7 @@ export const DEVUI_ECHART_THEME = {
         },
       },
       axisTick: {
-        show: false
+        show: false,
       },
     },
     line: {
@@ -386,26 +366,24 @@ export const DEVUI_ECHART_THEME = {
         label: {
           show: true,
           color: LIGHT_TEXT_COLOR,
-        }
+        },
       },
       label: {
-        color: LIGHT_TEXT_COLOR
-      }
+        color: LIGHT_TEXT_COLOR,
+      },
     },
     bar: {
       label: {
-        color: '#252b3a'
-      }
+        color: '#252b3a',
+      },
     },
     graph: {
       color: DEFAULT_BASIC_COLOR_PALETTE,
     },
     geo: {
       itemStyle: {
-        normal: {
-          borderColor: '#fff',
-          areaColor: '#eaebed',
-        },
+        borderColor: '#fff',
+        areaColor: '#eaebed',
       },
     },
   },
@@ -415,6 +393,6 @@ export const DEVUI_ECHART_THEME = {
     divergent: divergentColorPalette,
     sequential: sequentialColorPalette,
     adjacent: adjacentColorPalette,
-    semantic: semanticColor
-  }
+    semantic: semanticColor,
+  },
 };

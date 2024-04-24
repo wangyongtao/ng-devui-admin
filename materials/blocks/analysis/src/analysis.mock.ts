@@ -75,9 +75,7 @@ export const radarOptions = {
           }
       },
       "name": {
-          "textStyle": {
-              "fontSize": "12px"
-          }
+            "fontSize": "12px"  
       },
       "indicator": [
           {
