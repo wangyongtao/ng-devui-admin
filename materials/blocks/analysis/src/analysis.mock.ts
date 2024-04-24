@@ -74,12 +74,10 @@ export const radarOptions = {
               "color": "#535152"
           }
       },
-      "name": {
-            "fontSize": "12px"  
-      },
       "indicator": [
           {
               "name": "成功率",
+              "min" : 0,
               "max": 6500
           },
           {
@@ -101,7 +99,7 @@ export const radarOptions = {
       ],
       "axisName": {
           "color": "#CED1DB",
-          "fontSize": 14
+          "fontSize": 12
       }
   },
   "series": [
