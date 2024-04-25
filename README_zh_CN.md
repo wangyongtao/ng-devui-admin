@@ -35,11 +35,24 @@ DevUI Admin 是一个企业级中后台前端/设计解决方案，依据 DevUI 
 
 ## 使用
 
+(1) 使用 ng 命令，新建一个项目:
+
 ```bash
 ng new your-project && cd your-project  # 创建选项：非严格模式 & SCSS
 ng add ng-devui-admin
 
 npm start # open http://localhost:4200
+```
+
+
+(2) 或者，直接克隆本项目:
+
+```bash
+git clone https://github.com/DevCloudFE/ng-devui-admin.git
+cd ng-devui-admin
+npm install
+
+npm start # open http://localhost:8001 （详见 package.json 文件中 scripts 部分的脚本配置）
 ```
 
 更多的使用信息请参考：[使用文档](https://devui.design/admin-page/docs/getting-started)

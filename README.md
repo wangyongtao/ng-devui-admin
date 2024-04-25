@@ -35,12 +35,25 @@ DevUI Admin is an enterprise-level mid- and back-end front-end/design solution. 
 
 ## Usage
 
+(1) Create your own project.
+
 ```bash
 ng new your-project && cd your-project  # Create options: non-strict mode & SCSS
 ng add ng-devui-admin
 
 npm start # open http://localhost:4200
 ```
+
+(2) Or, Clone the project:
+
+```bash
+git clone https://github.com/DevCloudFE/ng-devui-admin.git
+cd ng-devui-admin
+npm install
+
+npm start # open http://localhost:8001 (see more scripts in 'package.json' )
+```
+
 
 For more information: [Document](https://devui.design/admin-page/docs/getting-started)
 
