@@ -1,7 +1,14 @@
-const webpack = require("webpack");
+// const webpack = require("webpack");
+// module.exports = {
+//   module: {
+//     rules: [{ test: /\.png$/, use: "file-loader" }],
+//   },
+// };
 
-module.exports = {
+export default {
   module: {
-    rules: [{ test: /\.png$/, use: "file-loader" }],
+    rules: [
+      { test: /\.png$/, use: 'file-loader' },
+    ],
   },
 };

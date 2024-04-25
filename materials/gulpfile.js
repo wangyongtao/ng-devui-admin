@@ -1,14 +1,14 @@
-const gulp = require('gulp');
-const fs = require('fs');
-const path = require('path');
-const template = require('gulp-template');
+import { task, src, dest } from 'gulp';
+import { readdirSync, lstatSync, readFileSync, existsSync, renameSync } from 'fs';
+import { resolve } from 'path';
+import template from 'gulp-template';
 
 function getMenu() {
   let menu = [];
-  fs.readdirSync(path.resolve('./blocks')).forEach((dirName) => {
+  readdirSync(resolve('./blocks')).forEach((dirName) => {
     let buffer;
-    if (fs.lstatSync(path.resolve(`./blocks/${dirName}`)).isDirectory()) {
-      buffer = fs.readFileSync(path.resolve(`./blocks/${dirName}/package.json`), 'utf-8');
+    if (lstatSync(resolve(`./blocks/${dirName}`)).isDirectory()) {
+      buffer = readFileSync(resolve(`./blocks/${dirName}/package.json`), 'utf-8');
     }
     let strContent;
     if (buffer) {
@@ -28,10 +28,10 @@ function getMenuByType() {
   let listMenus = [];
   let otherMenus = [];
   let chartMenus = [];
-  fs.readdirSync(path.resolve('./blocks')).forEach((dirName) => {
+  readdirSync(resolve('./blocks')).forEach((dirName) => {
     let buffer;
-    if (fs.lstatSync(path.resolve(`./blocks/${dirName}`)).isDirectory()) {
-      buffer = fs.readFileSync(path.resolve(`./blocks/${dirName}/package.json`), 'utf-8');
+    if (lstatSync(resolve(`./blocks/${dirName}`)).isDirectory()) {
+      buffer = readFileSync(resolve(`./blocks/${dirName}/package.json`), 'utf-8');
     }
     let strContent;
     if (buffer) {
@@ -76,10 +76,10 @@ function getMenuByType() {
 
 function getBlocksData() {
   let blocksData = [];
-  fs.readdirSync(path.resolve('./blocks')).forEach((dirName) => {
+  readdirSync(resolve('./blocks')).forEach((dirName) => {
     let buffer;
-    if (fs.lstatSync(path.resolve(`./blocks/${dirName}`)).isDirectory()) {
-      buffer = fs.readFileSync(path.resolve(`./blocks/${dirName}/package.json`), 'utf-8');
+    if (lstatSync(resolve(`./blocks/${dirName}`)).isDirectory()) {
+      buffer = readFileSync(resolve(`./blocks/${dirName}/package.json`), 'utf-8');
     }
     let strContent;
     if (buffer) {
@@ -103,10 +103,10 @@ function getOverviewData() {
   let listData = [];
   let otherData = [];
   let chartData = [];
-  fs.readdirSync(path.resolve('./blocks')).forEach((dirName) => {
+  readdirSync(resolve('./blocks')).forEach((dirName) => {
     let buffer;
-    if (fs.lstatSync(path.resolve(`./blocks/${dirName}`)).isDirectory()) {
-      buffer = fs.readFileSync(path.resolve(`./blocks/${dirName}/package.json`), 'utf-8');
+    if (lstatSync(resolve(`./blocks/${dirName}`)).isDirectory()) {
+      buffer = readFileSync(resolve(`./blocks/${dirName}/package.json`), 'utf-8');
     }
     let strContent;
     if (buffer) {
@@ -168,10 +168,10 @@ function getOverviewData() {
 
 function getRouteData() {
   let routeData = [];
-  fs.readdirSync(path.resolve('./blocks')).forEach((dirName) => {
+  readdirSync(resolve('./blocks')).forEach((dirName) => {
     let buffer;
-    if (fs.lstatSync(path.resolve(`./blocks/${dirName}`)).isDirectory()) {
-      buffer = fs.readFileSync(path.resolve(`./blocks/${dirName}/package.json`), 'utf-8');
+    if (lstatSync(resolve(`./blocks/${dirName}`)).isDirectory()) {
+      buffer = readFileSync(resolve(`./blocks/${dirName}/package.json`), 'utf-8');
     }
     let strContent;
     if (buffer) {
@@ -189,19 +189,18 @@ function getRouteData() {
 }
 
 function movePicture() {
-  fs.readdirSync(path.resolve('./blocks')).forEach((dirName) => {
-    if (fs.existsSync(path.resolve(`./blocks/${dirName}/${dirName}.png`))) {
-      fs.renameSync(path.resolve(`./blocks/${dirName}/${dirName}.png`), path.resolve(`./src/assets/${dirName}.png`));
+  readdirSync(resolve('./blocks')).forEach((dirName) => {
+    if (existsSync(resolve(`./blocks/${dirName}/${dirName}.png`))) {
+      renameSync(resolve(`./blocks/${dirName}/${dirName}.png`), resolve(`./src/assets/${dirName}.png`));
     }
   });
 }
 
-gulp.task('update-menu', function (done) {
+task('update-menu', function (done) {
   const typeMenus = getMenuByType();
   const menu = getMenu();
 
-  gulp
-    .src(`./templates/menu.ts`)
+  src(`./templates/menu.ts`)
     .pipe(
       template({
         formMenus: typeMenus.formMenus,
@@ -210,44 +209,40 @@ gulp.task('update-menu', function (done) {
         otherMenus: typeMenus.otherMenus,
       })
     )
-    .pipe(gulp.dest('./src/app/'));
+    .pipe(dest('./src/app/'));
 
-  gulp
-    .src(`./templates/menu-cn.ts`)
+  src(`./templates/menu-cn.ts`)
     .pipe(
       template({
         menus: menu,
       })
     )
-    .pipe(gulp.dest('./src/assets/i18n/zh-CN'));
-  gulp
-    .src(`./templates/menu-en.ts`)
+    .pipe(dest('./src/assets/i18n/zh-CN'));
+  src(`./templates/menu-en.ts`)
     .pipe(
       template({
         menus: menu,
       })
     )
-    .pipe(gulp.dest('./src/assets/i18n/en-US'));
+    .pipe(dest('./src/assets/i18n/en-US'));
   done();
 });
 
-gulp.task('update-materials', function (done) {
-  gulp
-    .src(`./templates/materials.component.ts`)
+task('update-materials', function (done) {
+  src(`./templates/materials.component.ts`)
     .pipe(
       template({
         blocksData: getBlocksData(),
       })
     )
-    .pipe(gulp.dest('./src/app/materials/'));
+    .pipe(dest('./src/app/materials/'));
   done();
 });
 
-gulp.task('update-overview', function (done) {
+task('update-overview', function (done) {
   const overviewData = getOverviewData();
 
-  gulp
-    .src(`./templates/overview.component.ts`)
+  src(`./templates/overview.component.ts`)
     .pipe(
       template({
         formData: overviewData.formData,
@@ -256,23 +251,22 @@ gulp.task('update-overview', function (done) {
         otherData: overviewData.otherData,
       })
     )
-    .pipe(gulp.dest('./src/app/overview/'));
+    .pipe(dest('./src/app/overview/'));
   done();
 });
 
-gulp.task('update-route', function (done) {
-  gulp
-    .src(`./templates/materials-routing.module.ts`)
+task('update-route', function (done) {
+  src(`./templates/materials-routing.module.ts`)
     .pipe(
       template({
         routes: getRouteData(),
       })
     )
-    .pipe(gulp.dest('./src/app/materials/'));
+    .pipe(dest('./src/app/materials/'));
   done();
 });
 
-gulp.task('move-picture', function (done) {
+task('move-picture', function (done) {
   movePicture();
   done();
 });

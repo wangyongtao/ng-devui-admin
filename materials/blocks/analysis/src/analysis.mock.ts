@@ -77,7 +77,6 @@ export const radarOptions = {
       "indicator": [
           {
               "name": "成功率",
-              "min" : 0,
               "max": 6500
           },
           {

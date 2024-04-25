@@ -34,9 +34,9 @@ There are two ways to insert a block: `Insert Source Code` and `Insert Module`.
 
 **The `Insert Module` pattern is recommended to help your code structure.**
 
-![avatar](./../../../../assets/docs/block-insert.png)
+![avatar](/assets/docs/block-insert.png)
 
-![avatar](./../../../../assets/docs/insert-result-en.png)
+![avatar](/assets/docs/insert-result-en.png)
 
 ## Create a page based on a block
 
@@ -60,7 +60,7 @@ cd src/app/pages/getting-started
 ng g ng-devui-admin:views
 ```
 
-![avatar](./../../../../assets/docs/view-insert.png)
+![avatar](/assets/docs/view-insert.png)
 
 When adding a block, you can enter multiple blocks at the same time and separate them with spaces.
 
@@ -85,7 +85,7 @@ updateMenu() {
 }
 ```
 
-![avatar](./../../../../assets/docs/view-insert-result-en.png)
+![avatar](/assets/docs/view-insert-result-en.png)
 
 By default, the newly added blocks are paved. If you need to change the layout, refer to "Responsive Layout" in [Layout](/admin-page/docs/layout) to change the layout.
 
@@ -103,9 +103,9 @@ ng g ng-devui-admin:views
 # We will set the route for you after creating the page automatically
 ```
 
-![avatar](./../../../../assets/docs/create-page.png)
+![avatar](/assets/docs/create-page.png)
 
-![avatar](./../../../../assets/docs/create-page-result-en.png)
+![avatar](/assets/docs/create-page-result-en.png)
 
 ## Using `Page Title` Block
 

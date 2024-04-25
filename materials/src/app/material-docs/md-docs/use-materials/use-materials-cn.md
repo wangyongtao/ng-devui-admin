@@ -1,6 +1,6 @@
 # 使用区块
 
-如果你使用 `ng-add` 添加我们的 `DevUI Admin` 项目，那么你可以通过 Angular CLI 快速的搭建一个 `Admin` 项目。该网站主要是为了方便你查看我们目前所有的区块，更多的 `admin` 区块的使用请参考 [DevUI Admin](https://devui.design/admin-page/docs/use-block)
+如果你使用 `ng-add` 添加我们的 `DevUI Admin` 项目，那么你可以通过 Angular CLI 快速的搭建一个 `Admin` 项目。该网站主要是为了方便你查看我们目前所有的区块，更多的 `admin` 区块的使用请参考 [DevUI Admin](https://devui.design/admin-page/docs/use-block) 。
 
 ## 添加区块
 
@@ -34,13 +34,13 @@ ng g ng-devui-admin:blocks
 
 **推荐使用 `Insert Module` 的模式，这样将会更利于你的代码组织结构。**
 
-![avatar](./../../../../assets/docs/block-insert.png)
+![avatar](/assets/docs/block-insert.png)
 
-![avatar](./../../../../assets/docs/insert-result-zh.png)
+![avatar](/assets/docs/insert-result-zh.png)
 
 ## 基于区块创建页面
 
-除了在已有的页面中插入区块，我们还提供了你也可以新建一个页面，并且使用我们的区块来搭建你的新页面。
+除了在已有的页面中插入区块，你也可以新建一个页面，并且使用我们的区块来搭建你的新页面。
 
 ```bash
 ng g ng-devui-admin:views --view-name view-name
@@ -60,7 +60,7 @@ cd src/app/pages/getting-started
 ng g ng-devui-admin:views
 ```
 
-![avatar](./../../../../assets/docs/view-insert.png)
+![avatar](/assets/docs/view-insert.png)
 
 添加区块的同时可以同时输入多个区块，使用空格分隔即可。
 
@@ -85,7 +85,7 @@ updateMenu() {
 }
 ```
 
-![avatar](./../../../../assets/docs/view-insert-result-zh.png)
+![avatar](/assets/docs/view-insert-result-zh.png)
 
 默认的我们新增的区块是铺满的，如果你需要更改布局，可以参考 [布局](/admin-page/docs/layout) 中 `响应式布局` 进行更改。
 
@@ -103,13 +103,13 @@ ng g ng-devui-admin:views
 # 创建页面之后我们会自动为你设置好路由
 ```
 
-![avatar](./../../../../assets/docs/create-page.png)
+![avatar](/assets/docs/create-page.png)
 
-![avatar](./../../../../assets/docs/create-page-result-zh.png)
+![avatar](/assets/docs/create-page-result-zh.png)
 
 ## 使用 `Page Title` 区块
 
-如果你使用了 `page title` 区块，那么在代码插入之后你还需要手动调整代码的位置如下所示
+如果你使用了 `page title` 区块，那么在代码插入之后你还需要手动调整代码的位置如下所示。
 
 ```html
 <!-- page title 应该放在最上层 -->

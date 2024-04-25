@@ -37,6 +37,10 @@ export class AdminDocComponent implements OnInit, AfterViewInit, OnDestroy {
     this.subs.add(
       this.route.data.subscribe((data) => {
         this.docsData = data;
+
+console.log("-------->getCurrentLanguage ", I18nUtil.getCurrentLanguage())
+console.log("-------->docsData ", data)
+
         this.setApi(I18nUtil.getCurrentLanguage());
       })
     );
@@ -64,7 +68,7 @@ export class AdminDocComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   setApi(lang) {
-    this.docs = this.docsData[lang];
+    this.docs = this.docsData[lang].default;
     setTimeout(() => {
       this.refreshView();
     });

@@ -2,7 +2,7 @@
 
 在 `Admin` 中，外层项目框架的下层，即为我们的页面。`Admin` 提供的示例页面中，每一页面均可被划分为一个或多个区块，我们将这些示例页面中提供的区块，进行拆分与汇总形成区块库。利用当前区块库，你可选取你需要的区块进行页面搭建，进一步提升页面搭建效率。所有区块均可在代码级别进行扩展，在使用后你可最大限度自定义它们。
 
-![avatar](./../../../../assets/docs/block-zh.png)
+![avatar](/assets/docs/block-zh.png)
 
 更多地，现在我们支持使用 `Admin Cli` 进行区块的使用，使用 `Admin Cli`，你只需几个简单步骤即可完成包括项目创建、页面添加、区块添加等操作。
 
@@ -21,6 +21,5 @@
 
 # 下一步
 
-[使用区块](/admin-materials/docs/use-materials)
-
-[区块总览](/admin-materials/overview)
+- [使用区块](/admin-materials/docs/use-materials) 
+- [区块总览](/admin-materials/overview) 

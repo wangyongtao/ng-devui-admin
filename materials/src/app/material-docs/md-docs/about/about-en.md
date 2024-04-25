@@ -2,7 +2,7 @@
 
 In `Admin`, the lower layer of the outer project frame is our page. Each page of the sample pages provided by `Admin` can be divided into one or more blocks. The blocks provided on the sample pages are divided and aggregated to form a block library. With the current block library, you can select the blocks you want to build pages, further improving page building efficiency. All chunks can be extended at the code level, so you can customize them to the maximum extent you can once you use them.
 
-![avatar](./../../../../assets/docs/block-en.png)
+![avatar](/assets/docs/block-en.png)
 
 More, we now support the use of `Admin Cli` for chunks. With `Admin Cli`, you can create projects, add pages, and add chunks in just a few simple steps.
 
@@ -21,6 +21,5 @@ Currently, we have gradually enriched blocks and components. In the next step, w
 
 # Next
 
-[Using Blocks](/admin-materials/docs/use-materials)
-
-[Blocks Overview](/admin-materials/overview)
+- [Using Blocks](/admin-materials/docs/use-materials) 
+- [Blocks Overview](/admin-materials/overview) 

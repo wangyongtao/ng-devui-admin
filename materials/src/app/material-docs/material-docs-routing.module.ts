@@ -15,24 +15,24 @@ const routes: Routes = [
         path: 'about',
         component: AdminDocComponent,
         data: {
-          'zh-cn': require('!html-loader!markdown-loader!./md-docs/about/about-cn.md'),
-          'en-us': require('!html-loader!markdown-loader!./md-docs/about/about-en.md')
+          'zh-cn': require('!html-loader?{"sources":false}!markdown-loader!./md-docs/about/about-cn.md'),
+          'en-us': require('!html-loader?{"sources":false}!markdown-loader!./md-docs/about/about-en.md')
         },
       },
       {
         path: 'use-materials',
         component: AdminDocComponent,
         data: {
-          'zh-cn': require('!html-loader!markdown-loader!./md-docs/use-materials/use-materials-cn.md'),
-          'en-us': require('!html-loader!markdown-loader!./md-docs/use-materials/use-materials-en.md')
+          'zh-cn': require('!html-loader?{"sources":false}!markdown-loader!./md-docs/use-materials/use-materials-cn.md'),
+          'en-us': require('!html-loader?{"sources":false}!markdown-loader!./md-docs/use-materials/use-materials-en.md')
         },
       },
       {
         path: 'dev-materials',
         component: AdminDocComponent,
         data: {
-          'zh-cn': require('!html-loader!markdown-loader!./md-docs/dev-materials/dev-materials-cn.md'),
-          'en-us': require('!html-loader!markdown-loader!./md-docs/dev-materials/dev-materials-en.md')
+          'zh-cn': require('!html-loader?{"sources":false}!markdown-loader!./md-docs/dev-materials/dev-materials-cn.md'),
+          'en-us': require('!html-loader?{"sources":false}!markdown-loader!./md-docs/dev-materials/dev-materials-en.md')
         },
       },
       { path: '', redirectTo: 'about', pathMatch: 'full' },
